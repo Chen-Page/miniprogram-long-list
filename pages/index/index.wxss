@@ -1,0 +1,47 @@
+@import "/assets/css/flex.wxss";
+
+.item{
+  box-sizing: border-box;
+  padding: 20rpx;
+  border-bottom: 1rpx solid #e2e2e2;
+}
+.item .serial-number{
+  font-size: 9pt;
+  padding:0 20rpx 0 0;
+}
+.item .item-img{
+  width: 160rpx;
+  margin-right: 20rpx;
+}
+.item .item-img .img{
+  vertical-align: middle;
+  width: 160rpx;
+  height: 160rpx;
+}
+.item .name{
+  font-size: 11pt;
+  font-weight: bold;
+}
+.item .price{
+  font-size: 11pt;
+  color: #db384c;
+}
+.item .price .unit{
+  font-size: 8pt;
+  margin-right: 5rpx;
+}
+
+.loadMore{
+  padding: 20rpx 0;
+  box-sizing: border-box;
+  font-size: 8pt;
+  text-align: center;
+  color: #999;
+}
+.noData{
+  height: 400rpx;
+  line-height: 400rpx;
+  text-align: center;
+  font-size: 11pt;
+  color: #999;
+}

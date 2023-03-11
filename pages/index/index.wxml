@@ -1,0 +1,41 @@
+<view class="page">
+  <view class="list">
+    <custom-long-list id='customLongList'>
+      <block wx:for="{{list}}" wx:key="*this">
+        <view class="item flex flex-shrink-0" id='long_{{item.LongListIndex}}'>
+          <view class="serial-number flex-col-center">
+            {{item.LongListIndex}}
+          </view>
+          <view class="item-img flex-shrink-0 flex-col-center">
+            <!-- <image src="{{item.DefaultPicUrl}}" mode="aspectFill" class="img"/> -->
+            <image src="../../assets/images/img.png" mode="aspectFill" class="img" />
+          </view>
+          <view class="item-info flex-1 flex-col flex-between">
+            <view class="name">
+              {{item.ProductName || ''}}
+            </view>
+            <view class="price">
+              <label class="unit">￥</label>{{item.Price || ''}}
+            </view>
+          </view>
+        </view>
+      </block>
+    </custom-long-list>
+    <view class="loadMore" wx:if="{{list.length > 0}}">
+      <block wx:if="{{hasMore}}">
+        ------ 加载中 ------
+      </block>
+      <block wx:else>
+        ------ 已加载完全部 ------
+      </block>
+    </view>
+  </view>
+  <view class="noData" wx:if="{{list.length == 0}}">
+    <block wx:if="{{loaded}}">
+      暂无数据
+    </block>
+    <block wx:else>
+      加载中...
+    </block>
+  </view>
+</view>
